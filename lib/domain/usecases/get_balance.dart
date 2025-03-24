@@ -14,5 +14,3 @@ class GetBalance extends UseCase<CoinBalance, NoParams> {
     return repository.getCurrentBalance();
   }
 }
-
-class NoParams {}

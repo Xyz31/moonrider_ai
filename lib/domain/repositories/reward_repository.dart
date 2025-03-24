@@ -8,4 +8,5 @@ abstract class RewardRepository {
   Future<Either<Failure, void>> updateBalance(int amount);
   Future<Either<Failure, void>> addTransaction(Transaction transaction);
   Future<Either<Failure, List<Transaction>>> getTransactionHistory();
+  Future<Either<Failure, DateTime?>> getLastScratchDate();
 }

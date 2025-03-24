@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mockito/annotations.dart';
+import 'package:moonrider_task/core/usecase/usecase.dart';
 import 'package:moonrider_task/domain/entities/coin_balance.dart';
 import 'package:moonrider_task/domain/repositories/reward_repository.dart';
 import 'package:moonrider_task/domain/usecases/get_balance.dart';

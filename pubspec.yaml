@@ -12,6 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.0
+  permission_handler: ^11.3.1
+  shared_preferences: ^2.2.3
   
 
 dev_dependencies:
@@ -23,3 +25,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  # Fonts
+  fonts:
+    - family: SpaceGrotesk
+      fonts:
+        - asset: assets/fonts/SpaceGrotesk-Medium.ttf

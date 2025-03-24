@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mockito/annotations.dart';
 import 'package:moonrider_task/core/error/failures.dart';
+import 'package:moonrider_task/core/usecase/usecase.dart';
 import 'package:moonrider_task/domain/entities/transaction.dart';
 import 'package:moonrider_task/domain/repositories/reward_repository.dart'; // Add this import
 import 'package:moonrider_task/domain/usecases/scratch_card_usecase.dart';
@@ -73,15 +74,15 @@ void main() {
 
     test('should return failure when updateBalance fails', () async {
       // Arrange
-      final failure = ServerFailure('Failed to update balance');
+      const failure = ServerFailure('Failed to update balance');
       when(mockRewardRepository.updateBalance(any))
-          .thenAnswer((_) async => Left(failure));
+          .thenAnswer((_) async => const Left(failure));
 
       // Act - Create an instance of NoParams
       final result = await usecase(NoParams());
 
       // Assert
-      expect(result, equals(Left(failure)));
+      expect(result, equals(const Left(failure)));
       verify(mockRewardRepository.updateBalance(any));
       verifyNoMoreInteractions(mockRewardRepository);
     });

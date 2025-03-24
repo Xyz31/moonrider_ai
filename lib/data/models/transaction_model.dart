@@ -3,11 +3,11 @@ import 'package:equatable/equatable.dart';
 
 class TransactionModel extends Transaction with EquatableMixin {
   const TransactionModel({
-    required String id,
-    required TransactionType type,
-    required int amount,
-    required DateTime date,
-  }) : super(id: id, type: type, amount: amount, date: date);
+    required super.id,
+    required super.type,
+    required super.amount,
+    required super.date,
+  });
 
   factory TransactionModel.fromJson(Map<String, dynamic> json) {
     return TransactionModel(
